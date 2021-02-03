@@ -1,0 +1,256 @@
+:root {
+    --Preto: #040517;
+    --Branco: #e5e5e5e7;
+    --Roxo: rgb(18, 8, 47);
+    --Roxo-claro: rgb(51, 39, 87);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: var(--Roxo-claro);
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+}
+.wrapper .sidebar {
+    position: fixed;
+    width: 16rem;
+    height: 100%;
+    background: var(--Roxo);
+    padding: 2.5rem 0.9rem;
+}
+
+/* Side bar */
+/* Profile */
+.profile {
+    display: flex;
+} 
+.profile img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+.profile-info {
+    width: 50%;
+    margin-left: 1rem;
+}
+.profile-info h2 {
+    font-size: 1.1rem;
+    color: var(--Branco);
+    margin: 0.2rem 0;
+}
+.profile-info a {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    color: var(--Branco);
+}
+.sidebar a:hover {
+    transition: .5s ease all;
+    opacity: 1;
+}
+
+/* Options */
+.list {
+    margin: 10rem 0 0 3rem;
+}
+.list hr {
+    opacity: 0.2;
+    margin: 1.5rem 0;
+    width: 70%;
+    border-radius: 5px;
+}
+.list ul li {
+    margin: 0.5rem 0;
+}
+.list ul li a {
+    opacity: 0.2;
+    color: white;
+}
+
+/* Content */
+.wrapper .main-content {
+    padding: 1.5rem;
+    width: 100%;
+    margin-left: 20rem;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+.search-bar input {
+    background: transparent;
+    outline: 0;
+    border: none;
+    padding: 0.5rem;
+    width: 20rem;
+    height: 1.8rem;
+    color: white;
+}
+.search-bar input::placeholder {
+    color: white;
+    opacity: 0.2;
+}
+.fa-search {
+    opacity: 0.2;
+    color: var(--Branco);
+    margin-right: 0.5rem;
+    font-size: 1.25rem;
+}
+
+/* Playlist */
+.featured-playlist {
+    margin-top: 2rem;
+}
+.playlist {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.playlist-info {
+    display: flex;
+    overflow-x: scroll;
+    max-width: 95rem;
+}
+.featured-playlist h2 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.playlist-image {
+    width: 25rem;
+    height: 15.6rem;
+    border-radius: 15px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.playlist-image img {
+    width: 100%;
+    object-fit: cover;
+    
+    transition: transform 1s, filter 2s ease-in-out;
+    filter: blur(1px);
+    transform: scale(1.2);
+}
+
+.playlist-image img:hover {
+    filter: blur(0);
+    transform: scale(1);
+}
+
+.playlist-description {
+    margin-top: 1rem;
+    color: white;
+}
+.playlist-description span {
+    opacity: 0.2;
+}
+.playlist-info::-webkit-scrollbar {
+    height: 0.6rem;
+    border-radius: 10px;
+    background-color: rgb(46, 36, 78);
+}
+.playlist-info::-webkit-scrollbar-thumb {
+    background-color: rgb(65, 50, 112);
+    border-radius: 6px;
+}
+
+/* Content */
+.content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.5rem;
+    color: white;
+    justify-content: space-between;
+}
+
+/* Profile Views */
+.profiles {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.profiles:hover {
+    opacity: 1;
+    transition:  1s ease;
+}
+.profiles h3 {
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+.profiles p, span {
+    color: gray;
+}
+.profile-about {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.profile-about img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+
+    transition:  1s ease-in-out;
+    transform: scale(1.2);
+}
+.profile-about img:hover {
+    transform: scale(1);
+}
+.about {
+    margin-left: 1rem;
+    margin-right: 100px;
+}
+.profiles span {
+    margin-left: auto;
+}
+
+/* Tracks */
+.Tracks {
+    padding: 0 5rem;
+}
+.tracks {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.tracks:hover {
+    opacity: 1;
+    transition:  1s ease-in-out;
+}
+.Tracks-info {
+    display: flex;
+    max-width: 37rem;
+    overflow-x: scroll;
+    margin-top: 2rem;
+}
+.Tracks-info img {
+    width: 10rem;
+    height: 10rem;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+.Tracks-info::-webkit-scrollbar {
+    height: 0.6rem;
+    border-radius: 10px;
+    background-color: rgb(46, 36, 78);
+}
+.Tracks-info::-webkit-scrollbar-thumb {
+    background-color: rgb(65, 50, 112);
+    border-radius: 6px;
+}
